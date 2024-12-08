@@ -4,16 +4,33 @@
     <title>Interactive Page</title>
     <style>
         body {
-            background-color: white;
+            background-color: #f0f0f0;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .welcome-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .welcome-section h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .welcome-section p {
+            color: #7f8c8d;
+            line-height: 1.6;
         }
         .button-container {
             display: flex;
             justify-content: space-between;
             max-width: 600px;
-            margin: 0 auto;
+            margin: 0 auto 40px auto;
         }
         button {
             padding: 10px 20px;
@@ -55,20 +72,40 @@
             transform: translate(-50%, -50%);
             text-align: center;
         }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #7f8c8d;
+        }
     </style>
 </head>
 <body>
-    <div class="button-container" id="mainButtons">
-        <button onclick="closeApp()">Close app</button>
-        <button onclick="showInfo()">Info</button>
-    </div>
+    <div class="container">
+        <div class="welcome-section">
+            <h1>Welcome to Our Interactive Demo</h1>
+            <p>This is a simple demonstration of interactive buttons and popups.
+               Try out the buttons below to see how they work!</p>
+        </div>
 
-    <div class="popup" id="infoPopup">
-        This app was created by Avi from ZebrappsAI
-    </div>
+        <div class="button-container" id="mainButtons">
+            <button onclick="closeApp()">Close app</button>
+            <button onclick="showInfo()">Info</button>
+        </div>
 
-    <div class="relaunch-container" id="relaunchContainer">
-        <button onclick="relaunchApp()">Relaunch the app</button>
+        <div class="popup" id="infoPopup">
+            This app was created by Avi from ZebrappsAI
+        </div>
+
+        <div class="relaunch-container" id="relaunchContainer">
+            <button onclick="relaunchApp()">Relaunch the app</button>
+        </div>
+
+        <footer>
+            <p>Contact us: contact@zebrappsai.com</p>
+            <p>© 2024 ZebrappsAI. All rights reserved.</p>
+        </footer>
     </div>
 
     <script>
